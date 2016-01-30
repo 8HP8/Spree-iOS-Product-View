@@ -1,0 +1,6 @@
+framework module Pods_Spree_iOS {
+  umbrella header "Pods-Spree iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
