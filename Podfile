@@ -6,6 +6,7 @@ use_frameworks!
 target 'Spree iOS' do
 
 pod 'Alamofire', '~> 3.0'
+pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 
 end
 
