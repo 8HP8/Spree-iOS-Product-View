@@ -13,6 +13,7 @@ private let reuseIdentifier = "Cell"
 
 class ProductsCollectionViewController: UICollectionViewController {
 
+    @IBOutlet var productCollection: UICollectionView!
 
     var items = NSMutableArray()
     var productImages = NSMutableArray()
@@ -126,4 +127,34 @@ class ProductsCollectionViewController: UICollectionViewController {
 
     }
   
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        // handle tap events
+        
+        self.performSegueWithIdentifier("showDetail", sender: self)
+        
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "showDetail" {
+            let indexPaths = self.productCollection!.indexPathsForSelectedItems()!
+            let indexPath = indexPaths[0] as NSIndexPath
+            
+            let vc = segue.destinationViewController as! DetailedViewController
+            
+            vc.productName = self.items[indexPath.row] as! String
+            vc.productBrandText = self.productBrand[indexPath.row] as! String
+            vc.productImageName = self.productImages[indexPath.row] as! String
+            vc.productPriceText = self.productPrice[indexPath.row] as! Int
+        }
+    }
+
+    
+
+
+    
+    
+    
+    
 }

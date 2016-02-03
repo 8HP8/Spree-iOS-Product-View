@@ -10,26 +10,31 @@ import UIKit
 
 class DetailedViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    var productName = String()
+    var productBrandText = String()
+    var productPriceText = Int()
+    var productImageName = String()
+    
+    
+    @IBOutlet weak var productImage: UIImageView!
+    @IBOutlet weak var productTitle: UILabel!
+    @IBOutlet weak var productBrand: UILabel!
+    @IBOutlet weak var productPrice: UILabel!
 
-        // Do any additional setup after loading the view.
-    }
+    override func viewWillAppear(animated: Bool) {
+        let imageStartUrl = "https://www.spree.co.za/api/v1/catalog/product/thumbnail/H599921/thumbnail/345x464"
+        let picURL = imageStartUrl + "\(productImageName)"
+        let url = NSURL(string: picURL)
+        let data = NSData(contentsOfURL: url!)
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        productTitle.text = productName
+        productBrand.text = productBrandText
+        productPrice.text = "R\(productPriceText)"
+        productImage.image = UIImage(data: data!)
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+  
+    
+    
 }
