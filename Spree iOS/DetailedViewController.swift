@@ -15,7 +15,6 @@ class DetailedViewController: UIViewController {
     var productPriceText = Int()
     var productImageName = String()
     
-    
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productTitle: UILabel!
     @IBOutlet weak var productBrand: UILabel!

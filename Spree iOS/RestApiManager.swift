@@ -20,7 +20,7 @@ class RestApiManager: NSObject {
         let request = NSMutableURLRequest(URL: NSURL(string: path)!)
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithRequest(request) { data, response, error in
-            
+
             let json : JSON = JSON(data : data!)
             onCompletion(json, error)
         }

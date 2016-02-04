@@ -73,14 +73,14 @@
 			name = Networking;
 			sourceTree = "<group>";
 		};
-		6E7893D31C62340900E26003 /* Controllers */ = {
+		6E7893D31C62340900E26003 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				6E1803811C61301D0042766D /* ProductsCollectionViewController.swift */,
 				6EFF2BAD1C61BF9600E2119F /* ProductsCollectionViewCell.swift */,
 				6E7893D41C6234B700E26003 /* DetailedViewController.swift */,
 			);
-			name = Controllers;
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		6E7AAF5F1C5CA3CF00CB0399 = {
@@ -107,7 +107,7 @@
 				6E1803841C6134A40042766D /* SwiftyJSON.swift */,
 				6E7AAF6B1C5CA3CF00CB0399 /* AppDelegate.swift */,
 				6E7893D21C6233FE00E26003 /* Networking */,
-				6E7893D31C62340900E26003 /* Controllers */,
+				6E7893D31C62340900E26003 /* ViewControllers */,
 				6E7AAF6F1C5CA3CF00CB0399 /* Main.storyboard */,
 				6E7AAF721C5CA3CF00CB0399 /* Assets.xcassets */,
 				6E7AAF741C5CA3CF00CB0399 /* LaunchScreen.storyboard */,
