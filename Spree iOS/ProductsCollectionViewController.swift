@@ -19,14 +19,13 @@ class ProductsCollectionViewController: UICollectionViewController {
     var productImages = NSMutableArray()
     var productBrand = NSMutableArray()
     var productPrice = NSMutableArray()
-
-    override func viewWillAppear(animated: Bool) {
+    
+    override func viewDidLoad() {
         addProductTitleData()
         addImageData()
         addBrandName()
         addPrice()
     }
-
 
     // Get Product Title
     func addProductTitleData() {
@@ -102,26 +101,26 @@ class ProductsCollectionViewController: UICollectionViewController {
         
         cell.productBg.layer.cornerRadius = 15.0
         cell.productBg.clipsToBounds = true
-        
+        cell.productTitleBackground.layer.cornerRadius = 10.0
+        cell.productTitleBackground.clipsToBounds = true
         // Run this code on second thread
         let queue: dispatch_queue_t = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
             dispatch_async(queue) { () -> Void in
-
+                
               // Check for errors
                 if self.items == [] {
-                    print("Error loading Product Titles")
+                    print("Trouble loading Product Titles")
                 }
                 else if self.productImages == []{
-                    print("Error loading Product Images")
+                    print("Trouble loading Product Images")
                 }
                 else if self.productBrand == []{
-                    print("Error loading Product Brands")
+                    print("Trouble loading Product Brands")
                 }
                 else if self.productPrice == []{
-                    print("Error loading Product Price")
+                    print("Trouble loading Product Price")
                 }
                 else {
-                    
                     // Convert Product Image String -> NSData
                     let imageStartUrl = "https://www.spree.co.za/api/v1/catalog/product/thumbnail/H599921/thumbnail/345x464"
                     let picURL = imageStartUrl + "\(self.productImages[indexPath.row])"

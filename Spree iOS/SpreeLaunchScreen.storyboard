@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="R8n-ES-6CY">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Spree Launch View Controller-->
+        <scene sceneID="2hK-e3-4Bd">
+            <objects>
+                <viewController id="R8n-ES-6CY" customClass="SpreeLaunchViewController" customModule="Spree_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kgn-L1-MDD"/>
+                        <viewControllerLayoutGuide type="bottom" id="LYS-md-sYx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RA6-4X-dTs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="HomescreenBg" translatesAutoresizingMaskIntoConstraints="NO" id="jgb-Rx-kmY">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spree Logo" translatesAutoresizingMaskIntoConstraints="NO" id="5IB-9q-Aoe">
+                                <rect key="frame" x="200" y="232" width="200" height="136"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="hlM-AS-gzz"/>
+                                    <constraint firstAttribute="height" constant="136" id="i0y-7A-7ex"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jgb-Rx-kmY" firstAttribute="leading" secondItem="RA6-4X-dTs" secondAttribute="leading" id="AQC-0d-xMm"/>
+                            <constraint firstItem="LYS-md-sYx" firstAttribute="top" secondItem="jgb-Rx-kmY" secondAttribute="bottom" id="J7s-pb-deK"/>
+                            <constraint firstItem="5IB-9q-Aoe" firstAttribute="centerX" secondItem="RA6-4X-dTs" secondAttribute="centerX" id="XmR-6y-lK5"/>
+                            <constraint firstItem="jgb-Rx-kmY" firstAttribute="top" secondItem="kgn-L1-MDD" secondAttribute="bottom" id="cQ7-cD-wm2"/>
+                            <constraint firstItem="5IB-9q-Aoe" firstAttribute="centerY" secondItem="RA6-4X-dTs" secondAttribute="centerY" id="jEg-4L-juS"/>
+                            <constraint firstAttribute="trailing" secondItem="jgb-Rx-kmY" secondAttribute="trailing" id="oz3-gd-cSK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="spreeLogo" destination="5IB-9q-Aoe" id="m3C-xO-3NQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rvr-S8-uvk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="187" y="393"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="HomescreenBg" width="517" height="644"/>
+        <image name="Spree Logo" width="374" height="136"/>
+    </resources>
+</document>

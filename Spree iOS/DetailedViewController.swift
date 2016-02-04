@@ -21,6 +21,7 @@ class DetailedViewController: UIViewController {
     @IBOutlet weak var productPrice: UILabel!
 
     override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
         let imageStartUrl = "https://www.spree.co.za/api/v1/catalog/product/thumbnail/H599921/thumbnail/345x464"
         let picURL = imageStartUrl + "\(productImageName)"
         let url = NSURL(string: picURL)
